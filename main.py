@@ -99,3 +99,40 @@ def delete_student():
 
     print(f"Student with ID {student_id} not found.")
 
+while True:
+    width = 80
+    print("=" * width)
+    print("STUDENT MANAGEMENT SYSTEM".center(width))
+    print("=" * width)
+    print("1. Add Student")
+    print("2. View Students")
+    print("3. Find student")
+    print("4. Update Student")
+    print("5. Delete Student")
+    print("6. Exit")
+
+
+    choice = input("Choose an option: ")
+
+    if choice == "6":
+        print("Goodbye!")
+        break
+
+    if choice not in ["1", "2", "3", "4", "5"]:
+        print("Invalid Option")
+        continue
+
+    if choice == "1":
+        add_student()
+
+    elif choice == "2":
+        view_students()
+
+    elif choice == "3":
+        find_student()
+
+    elif choice == "4":
+        update_student()
+
+    elif choice == "5":
+        delete_student()
